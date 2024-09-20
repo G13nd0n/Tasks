@@ -67,7 +67,7 @@ public class Main {
     }
 
     public static int countDeadlinesWithStream(ArrayList<Task> tasks) {
-        int count = (int) tasks.stream()
+        int count = (int) \tasks.stream()
                 .filter((t) -> t instanceof Deadline)
                 .count(); //terminal operation; aggregate function
 
