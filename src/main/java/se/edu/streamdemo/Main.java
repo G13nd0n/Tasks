@@ -11,7 +11,8 @@ public class Main {
         System.out.println("Welcome to Task manager (using streams)");
         Datamanager dataManager = new Datamanager("./data/data.txt");
         ArrayList<Task> tasksData = dataManager.loadData();
-
+        // C:\Users\glend\OneDrive\Documents\Tasks\data
+        // dont use absolute path as it may not exist when using application on a different computer
         System.out.println("Printing all data ...");
         printAllData(tasksData);
 
