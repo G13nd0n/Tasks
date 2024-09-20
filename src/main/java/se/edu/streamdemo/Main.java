@@ -15,15 +15,19 @@ public class Main {
         // dont use absolute path as it may not exist when using application on a different computer
         System.out.println("Printing all data ...");
         printAllData(tasksData);
+        printDataWithStream(tasksData);
 
         System.out.println("Printing deadlines ...");
         printDeadlines(tasksData);
+        printDataWithStream(tasksData);
 
-        System.out.println("Total number of deadlines: " + countDeadlines(tasksData));
+        System.out.println("Total number of deadlines (iterating): " + countDeadlines(tasksData));
+        System.out.println("Total number of deadlines (stream): " + countDeadlinesWithStream(tasksData));
 
     }
 
     private static int countDeadlines(ArrayList<Task> tasksData) {
+
         int count = 0;
         for (Task t : tasksData) {
             if (t instanceof Deadline) {
